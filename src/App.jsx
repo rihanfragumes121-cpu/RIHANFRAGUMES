@@ -74,7 +74,7 @@ export default function App() {
               <span className="hero-line"><span>Three fragrances.</span></span>
               <span className="hero-line"><span>One signature.</span></span>
             </h1>
-            <p className="hero-sub">Breeze, Velour and Striker. Premium luxury perfumes, &#8377;{PRICE} each, ordered directly on WhatsApp.</p>
+<p className="hero-sub">Breeze, Velour and Striker. Premium luxury perfumes, &#8377;{PRICE} each, ordered directly on WhatsApp.</p>
             <div className="hero-cta">
               <a className="btn btn-gold" href="#collection">Shop the collection</a>
               <a className="btn btn-line" href={generalWhatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> Chat with us</a>
@@ -91,16 +91,16 @@ export default function App() {
             ))}
           </div>
         </section>
-
         <section id="about" className="about">
           <Logo className="about-logo" />
-          <p className="statement">Premium luxury perfumes from Pimpri, Pune. Three distinct fragrance profiles, each in its own colour and character.</p>
+          <p className="statement">For over 1.5 years, our three signature fragrances have earned customer love and strong demand. Discover the scents customers keep coming back for.</p>
         </section>
 
         <section id="collection" className="collection">
           <h2>Signature collection</h2>
           <p className="sec-sub">Each perfume: MRP &#8377;{MRP}, now &#8377;{PRICE}. You save &#8377;{SAVING}.</p>
           <p className="sec-sub"><strong>PREPAID ONLY — NO COD</strong><br />Cash on Delivery is not available. Contact us on WhatsApp to confirm payment details.</p>
+          <p className="fragrance-note">EAU DE PARFUM • 25%+ • more concentration</p>
           <div className="cards">
             {PRODUCTS.map(p => (
               <article className="card" key={p.id} style={{ '--accent': p.accent }}>

@@ -112,3 +112,40 @@ address{font-style:normal}
 .tier li{padding:5px 12px;border:1px solid var(--accent);font-size:14px;border-radius:999px}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+.fragrance-proof {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: fit-content;
+  margin: 22px 0 0;
+  padding: 14px 20px;
+  border-left: 2px solid #c8a45d;
+  background: linear-gradient(90deg, rgba(200,164,93,.13), transparent);
+}
+.proof-title {
+  color: #d8b66b;
+  font-size: 13px;
+  letter-spacing: .22em;
+  font-weight: 600;
+}
+.proof-concentration {
+  color: #f0d9a0;
+  font-size: 15px;
+}
+.proof-lasting {
+  color: var(--mute);
+  font-size: 13px;
+}
+@media(max-width:820px) {
+  .fragrance-proof { margin-top: 18px; padding: 12px 16px; }
+}
+
+.fragrance-note {
+  text-align: center;
+  color: #d8b66b;
+  font-size: 12px;
+  letter-spacing: .12em;
+  margin: 14px 0 28px;
+}
+.fragrance-note span { padding: 0 8px; color: var(--mute); }

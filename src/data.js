@@ -17,13 +17,15 @@ export const SAVING = MRP - PRICE
 export const PRODUCTS = [
   { id: 'breeze', name: 'BREEZE', image: breeze, accent: '#6fb1dc', quantity: '50 ML',
     family: 'Fresh Green Aquatic Woody', character: 'Fresh, clean, smooth and masculine.',
-    lasting: '8â€“10 hours (brand-provided)', bestFor: ['Summer', 'Daytime', 'Office', 'Casual wear'],
+    lasting: '8–10 hours (brand-provided)', bestFor: ['Summer', 'Daytime', 'Office', 'Casual wear'],
     notes: { top: ['Fresh Green Notes', 'Citrus', 'Bergamot', 'Watermelon'], heart: ['Lavender', 'Lotus', 'Jasmine', 'Aromatic Green Accords'], base: ['White Musk', 'Amber', 'Sandalwood', 'Soft Woody Notes'] } },
   { id: 'velour', name: 'VELOUR', image: velour, accent: '#a46bd1', quantity: '50 ML',
     family: 'Fruity, Nutty, Floral', character: 'Fruity, nutty, floral, warm and sweet.',
+    lasting: '8–10 hours (brand-provided)',
     notes: { top: ['Pear', 'Mandarin', 'Almond', 'Coffee'], heart: ['Gardenia', 'Jasmine', 'Tuberose', 'Frangipani'], base: ['Tonka Bean', 'Cocoa', 'Brown Sugar', 'Patchouli'] } },
   { id: 'striker', name: 'STRIKER', image: striker, accent: '#e0453f', quantity: '50 ML',
     family: 'Fresh Citrus, Sweet Spicy, Woody', character: 'Fresh, citrus, sweet, spicy and woody.',
+    lasting: '8–10 hours (brand-provided)',
     notes: { top: ['Calabrian Lemon', 'Bergamot', 'Mint', 'Mandarin Orange', 'Sage'], heart: ['Praline', 'Cinnamon', 'Ginger', 'Black Cardamom', 'Aromatic Floral Accords'], base: ['Black Amber', 'Patchouli', 'Sandalwood', 'Cedarwood', 'Musk'] } },
 ]
 

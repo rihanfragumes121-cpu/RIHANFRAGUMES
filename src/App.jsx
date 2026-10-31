@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, useCallback } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Menu, X, MessageCircle, Instagram, MapPin, Phone } from 'lucide-react'
+import { Menu, X, MessageCircle, Instagram, MapPin, Phone, Youtube } from 'lucide-react'
 import logo from './assets/logo.png'
 import { BRAND, PRODUCTS, MRP, PRICE, SAVING, whatsappUrl, generalWhatsapp } from './data.js'
 import ProductModal from './components/ProductModal.jsx'
@@ -74,7 +74,7 @@ export default function App() {
               <span className="hero-line"><span>Three fragrances.</span></span>
               <span className="hero-line"><span>One signature.</span></span>
             </h1>
-            <p className="hero-sub">Breeze, Velour and Striker. Premium luxury perfumes, ₹{PRICE} each, ordered directly on WhatsApp.</p>
+            <p className="hero-sub">Breeze, Velour and Striker. Premium luxury perfumes, &#8377;{PRICE} each, ordered directly on WhatsApp.</p>
             <div className="hero-cta">
               <a className="btn btn-gold" href="#collection">Shop the collection</a>
               <a className="btn btn-line" href={generalWhatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> Chat with us</a>
@@ -99,7 +99,8 @@ export default function App() {
 
         <section id="collection" className="collection">
           <h2>Signature collection</h2>
-          <p className="sec-sub">Each perfume: MRP ₹{MRP}, now ₹{PRICE}. You save ₹{SAVING}.</p>
+          <p className="sec-sub">Each perfume: MRP &#8377;{MRP}, now &#8377;{PRICE}. You save &#8377;{SAVING}.</p>
+          <p className="sec-sub"><strong>PREPAID ONLY — NO COD</strong><br />Cash on Delivery is not available. Contact us on WhatsApp to confirm payment details.</p>
           <div className="cards">
             {PRODUCTS.map(p => (
               <article className="card" key={p.id} style={{ '--accent': p.accent }}>
@@ -109,7 +110,7 @@ export default function App() {
                   <p className="family">{p.family}</p>
                   <p>{p.character}</p>
                   <p className="meta">{p.quantity || 'Quantity to be confirmed'}</p>
-                  <p className="price"><strong>₹{PRICE}</strong> <s>₹{MRP}</s> <span>Save ₹{SAVING}</span></p>
+                  <p className="price"><strong>&#8377;{PRICE}</strong> <s>&#8377;{MRP}</s> <span>Save &#8377;{SAVING}</span></p>
                   <div className="card-actions">
                     <button className="btn btn-line" onClick={() => setActive(p)}>View details</button>
                     <a className="btn btn-gold" href={whatsappUrl(p)} target="_blank" rel="noopener noreferrer"><MessageCircle size={18} /> Order on WhatsApp</a>
@@ -124,15 +125,16 @@ export default function App() {
           <h2>Why RIHAN FRAGUMES</h2>
           <ul>
             <li><h3>Three distinct profiles</h3><p>Fresh aquatic, fruity floral and citrus spice: each fragrance has its own notes and mood.</p></li>
-            <li><h3>One clear price</h3><p>Every perfume is ₹{PRICE} against an MRP of ₹{MRP}, so you save ₹{SAVING}.</p></li>
+            <li><h3>One clear price</h3><p>Every perfume is &#8377;{PRICE} against an MRP of &#8377;{MRP}, so you save &#8377;{SAVING}.</p></li>
             <li><h3>Order directly</h3><p>Message us on WhatsApp with the perfume you want. Ordering and payment are handled there.</p></li>
             <li><h3>A local shop</h3><p>Visit us in Pimpri, near YCM Hospital.</p></li>
           </ul>
         </section>
 
         <section className="insta">
-          <h2>Follow RIHAN FRAGUMES on Instagram</h2>
+          <h2>Follow RIHAN FRAGUMES</h2>
           <a className="btn btn-line" href={BRAND.instagram} target="_blank" rel="noopener noreferrer"><Instagram size={18} /> @rihanfragumes</a>
+          <a className="btn btn-line" href="https://youtube.com/@rehan_vlogs9107" target="_blank" rel="noopener noreferrer"><Youtube size={18} /> @vlogs by rehan</a>
         </section>
 
         <section id="contact" className="contact">
@@ -151,10 +153,13 @@ export default function App() {
         <nav aria-label="Footer"><h3>Explore</h3>{LINKS.map(([l, h]) => <a key={l} href={h}>{l}</a>)}</nav>
         <nav aria-label="Products"><h3>Perfumes</h3>{PRODUCTS.map(p => <button key={p.id} onClick={() => setActive(p)}>{p.name}</button>)}</nav>
         <div><h3>Visit and chat</h3><address>{BRAND.address}</address><a href={generalWhatsapp} target="_blank" rel="noopener noreferrer">WhatsApp {BRAND.whatsappDisplay}</a><a href={BRAND.instagram} target="_blank" rel="noopener noreferrer">Instagram</a></div>
-        <p className="copy">© {new Date().getFullYear()} RIHAN FRAGUMES. All rights reserved.</p>
+        <p className="copy">Â© {new Date().getFullYear()} RIHAN FRAGUMES. All rights reserved.</p>
       </footer>
 
       {active && <ProductModal product={active} onClose={closeModal} />}
     </div>
   )
 }
+
+
+
